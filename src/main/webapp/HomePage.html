@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="utils.js" defer></script>
+	<script src="home.js" defer></script>
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css"/>
+	<meta charset="ISO-8859-1">
+	<title>Home</title>
+</head>
+
+<body>
+
+<div class="alignright">
+	<a class="logout" href="Logout">Logout</a>
+</div>
+
+<h1>Welcome to the Home Page!</h1>
+
+<p id="bankAccountsParagraph" style="text-align:center;"></p>
+
+<br>
+
+<div id="accountDetails" class="aligncenter" hidden>
+	<hr>
+	<p id="accountDetailsHeader"></p>
+	<br>
+	<p id="accountDetailsID"></p>
+	<p id="accountDetailsAmount"></p>
+	<p id="accountDetailsOwner"></p>
+
+	<div id="movementsTableDiv">
+		<table></table>
+	</div>
+	<hr>
+
+	<p>Complete the form to transfer money</p>
+
+	<form autocomplete="off" id="movementForm">
+		<input list="contactUsernames" id="usernameField" type="text" name="toUsername" placeholder= "toUsername" required> <br><br>
+		<input list="contactBankAccounts" id="bankAccountIdField" type="number" name="toBankAccountID" min=1 placeholder= "toBankAccountId" required> <br><br>
+		<input type="number" name="amount" step="0.01" min=0 placeholder= "amount" required> <br><br>
+		<input type="text" name="causal" placeholder= "causal" maxlength="150"> <br><br>
+
+		<input type="submit" name="movement" value="Transfer">
+	</form>
+	
+	<datalist id="contactUsernames">
+	<option value = "bella">
+	</datalist>
+	
+	<datalist id="contactBankAccounts">
+	</datalist>
+</div>
+
+<p id="errorMessage" class="aligncenter" style="text-decoration:underline; color:darkred;"></p>
+
+<div id="movementSuccessDiv" class="aligncenter" hidden>
+	<p>Movement successful!</p>
+
+	<div id="movementSuccessTableDiv">
+		<table></table>
+	</div>
+	<br>
+	<input type="button" id="saveContactButton" value="Save contact">
+</div>
+
+</body>
+</html>

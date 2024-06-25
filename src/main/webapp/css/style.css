@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+.aligncenter{
+	text-align:center;
+}
+
+.alignright{
+	text-align:right;
+}
+
+a.logout:link {
+	color: darkred;
+}
+a.logout:active {
+	color: yellow;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+td, th {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+td {
+	border-right: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+	color: darkred;
+	}
+
+body {
+  background-color: lightblue;
+}
